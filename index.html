@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="public/favicon.ico" />
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen font-[Poppins] text-gray-800">
+
+    <div class="flex justify-center items-center min-h-screen p-4">
+        <!-- App Container -->
+        <div class="w-full max-w-2xl bg-white p-8 rounded-2xl shadow-xl shadow-gray-300 space-y-6 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-400">
+
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <h1 class="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                    Task Manager
+                </h1>
+                <p class="text-gray-500 text-lg font-medium">Achieve more with organized tasks</p>
+            </div>
+
+            <!-- Task Input Section -->
+            <div class="flex flex-col gap-4 mb-8">
+                <div class="flex items-center gap-3">
+                    <input id="task-input" type="text" 
+                        class="flex-1 p-4 text-lg border-2 border-gray-300 rounded-2xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 placeholder-gray-500 transition-all duration-200 shadow-md" 
+                        placeholder="What needs to be done?" />
+                </div>
+                
+                <!-- Due Date & Reminder Section -->
+                <div class="flex items-center gap-3">
+                    <div class="flex-1 flex items-center gap-3">
+                        <div class="relative flex-1">
+                            <input id="due-date-input" type="date" 
+                                class="w-full p-3 text-md border-2 border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 shadow-sm" />
+                            <label for="due-date-input" class="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">Due Date</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="reminder-checkbox" type="checkbox" 
+                                class="w-5 h-5 cursor-pointer rounded-lg border-2 border-gray-400 checked:bg-blue-500 checked:border-blue-500 focus:ring-blue-500/30 transition-all duration-200" />
+                            <label for="reminder-checkbox" class="ml-2 text-sm text-gray-700">Set Reminder</label>
+                        </div>
+                    </div>
+                    <button id="add-task-button" 
+                        class="bg-gradient-to-br from-blue-500 to-blue-600 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
+                        <i class="fas fa-plus mr-2"></i>Add
+                    </button>
+                    <button id="edit-task-button" class="bg-green-500 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg hover:scale-105 transition-all duration-200 hidden">
+                        <i class="fas fa-check mr-2"></i>Save
+                    </button>
+                </div>
+            </div>
+
+            <!-- Task Controls Section -->
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-gray-500 text-sm font-medium">
+                    <span id="task-count"></span> tasks remaining
+                </span>
+                <button id="clear-tasks" 
+                    class="bg-red-500 text-white px-5 py-2 rounded-xl font-medium hover:bg-red-600 transition-all duration-200 shadow-md">
+                    Clear All
+                </button>
+            </div>
+
+            <!-- Task List Section -->
+            <div id="task-list" class="space-y-3">
+                <!-- Tasks will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
