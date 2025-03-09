@@ -90,7 +90,7 @@ export class TaskForm {
                 const content = this.getTaskContent();
                 if (content) {
                     const dueDate = this.getDueDate()
-                    const hasReminder = this.getHasReminder()
+                    const hasReminder = this.getHasReminder() 
                     callback(this.editTaskId, content ,dueDate , hasReminder);
                     this.resetForm();
                 }

@@ -109,7 +109,7 @@ export class TaskService {
         }
     }
 
-    // Check for tasks due today and create notifications if reminders are set
+    // Check for tasks due today and create notifications if reminders are set 
     checkDueTasks(): void {
         const today = new Date()
         today.setHours(0 , 0 , 0 ,0)

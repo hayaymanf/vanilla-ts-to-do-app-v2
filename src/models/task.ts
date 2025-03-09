@@ -4,4 +4,4 @@ export interface Task {
     completed: boolean;
     dueDate: string | null ;
     hasReminder: boolean ;
-}
+} 

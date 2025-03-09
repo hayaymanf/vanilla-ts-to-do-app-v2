@@ -10,7 +10,7 @@ export class TaskItem {
   private formatDueDate(dateString: string): string {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  }
+  } 
 
   private getDueDateClass(): string {
     if (!this.task.dueDate) return '';
@@ -64,23 +64,23 @@ export class TaskItem {
                       </div>` : ''}
             </div>
             <div class="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                <button class="edit-task text-blue-500 hover:text-blue-600 p-2 rounded-lg hover:bg-blue-100" data-id="${
+                <button class="edit-task text-blue-500 hover:text-blue-600 p-2 rounded-lg hover:bg-blue-100 cursor-pointer" data-id="${
                   this.task.id
                 }">
                     <i class="fas fa-pencil-alt fa-sm"></i>
                 </button>
-                <button class="delete-task text-red-500 hover:text-red-600 p-2 rounded-lg hover:bg-red-100" data-id="${
+                <button class="delete-task text-red-500 hover:text-red-600 p-2 rounded-lg hover:bg-red-100 cursor-pointer" data-id="${
                   this.task.id
                 }">
                     <i class="fas fa-trash-alt fa-sm"></i>
                 </button>
                 <div class="flex flex-col gap-1 ml-2">
-                    <button class="move-up text-gray-500 hover:text-blue-500 p-1 rounded-md hover:bg-gray-100" data-id="${
+                    <button class="move-up text-gray-500 hover:text-blue-500 p-1 rounded-md hover:bg-gray-100 cursor-pointer" data-id="${
                       this.task.id
                     }">
                         <i class="fas fa-arrow-up fa-xs"></i>
                     </button>
-                    <button class="move-down text-gray-500 hover:text-red-500 p-1 rounded-md hover:bg-gray-100" data-id="${
+                    <button class="move-down text-gray-500 hover:text-red-500 p-1 rounded-md hover:bg-gray-100 cursor-pointer" data-id="${
                       this.task.id
                     }">
                         <i class="fas fa-arrow-down fa-xs"></i>

@@ -1,6 +1,6 @@
 import { Task } from "../models/task";
 
-const LOCAL_STORAGE_KEY = "to-do-app-tasks";
+const LOCAL_STORAGE_KEY = "to-do-app-tasks"; 
 
 export function saveTaskToLocalStorage(tasks: Task[]): void {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));

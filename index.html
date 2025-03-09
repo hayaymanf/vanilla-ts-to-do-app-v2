@@ -9,7 +9,7 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
      <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="public/favicon.ico" />
-</head>
+</head> 
 
 <body class="bg-gradient-to-br from-gray-50 to-gray-200 min-h-screen font-[Poppins] text-gray-800">
 
@@ -38,7 +38,7 @@
                     <div class="flex-1 flex items-center gap-3">
                         <div class="relative flex-1">
                             <input id="due-date-input" type="date" 
-                                class="w-full p-3 text-md border-2 border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 shadow-sm" />
+                                class="w-full p-3 text-md border-2 border-gray-300 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 shadow-sm cursor-pointer" />
                             <label for="due-date-input" class="absolute -top-2 left-3 bg-white px-1 text-xs text-gray-500">Due Date</label>
                         </div>
                         <div class="flex items-center">
@@ -48,10 +48,10 @@
                         </div>
                     </div>
                     <button id="add-task-button" 
-                        class="bg-gradient-to-br from-blue-500 to-blue-600 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
+                        class="bg-gradient-to-br from-blue-500 to-blue-600 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 cursor-pointer">
                         <i class="fas fa-plus mr-2"></i>Add
                     </button>
-                    <button id="edit-task-button" class="bg-green-500 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg hover:scale-105 transition-all duration-200 hidden">
+                    <button id="edit-task-button" class="bg-green-500 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg hover:scale-105 transition-all duration-200 hidden cursor-pointer">
                         <i class="fas fa-check mr-2"></i>Save
                     </button>
                 </div>
@@ -63,7 +63,7 @@
                     <span id="task-count"></span> tasks remaining
                 </span>
                 <button id="clear-tasks" 
-                    class="bg-red-500 text-white px-5 py-2 rounded-xl font-medium hover:bg-red-600 transition-all duration-200 shadow-md">
+                    class="bg-red-500 text-white px-5 py-2 rounded-xl font-medium hover:bg-red-600 transition-all duration-200 shadow-md cursor-pointer">
                     Clear All
                 </button>
             </div>

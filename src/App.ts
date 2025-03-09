@@ -146,7 +146,7 @@ export class App {
         this.taskListContainer.innerHTML = taskList.render();
         
         // Update the task count to show only incomplete tasks
-        const remainingTasks = this.getIncompleteTaskCount(tasks);
+        const remainingTasks = this.getIncompleteTaskCount(tasks); 
         this.taskCountElement.textContent = `${remainingTasks}`;
     }
 }
